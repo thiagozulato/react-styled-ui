@@ -6,6 +6,7 @@ import createTheme, { colorsPalette } from "./components/styles/createTheme";
 
 //UI Components
 import Button from "./components/button";
+import Title from "./components/title";
 
 import "./styles.css";
 
@@ -76,25 +77,6 @@ const ColorPalette = ({ theme }) => {
   );
 };
 
-const TitleStyle = styled.h1`
-  ${props => {
-    const theme = createTheme(props.theme);
-    return css`
-      font-size: 18px;
-      color: ${theme.textColor};
-      font-weight: 600;
-
-      small {
-        display: block;
-        font-size: 13px;
-        color: #b4b2c2;
-        font-weight: 300;
-        margin-top: 5px;
-      }
-    `;
-  }}
-`;
-
 const TextWrapper = styled.span`
   ${props => {
     const theme = createTheme(props.theme);
@@ -139,17 +121,8 @@ Text.defaultProps = {
   type: "default"
 };
 
-const Title = ({ title, description }) => {
-  return (
-    <TitleStyle>
-      {title}
-      {description && <small>{description}</small>}
-    </TitleStyle>
-  );
-};
-
 const theme = {
-  primaryColor: "#3f51b5"
+  primaryColor: "#514d6a"
 };
 
 const ButtonDemo = styled.div`
@@ -240,6 +213,8 @@ class App extends PureComponent {
           <Title
             title="Title Sample"
             description="A description for the title"
+            border
+            borderType="solid"
           />
           <br />
           <Title title="Text component" />
