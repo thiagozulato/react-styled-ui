@@ -149,7 +149,7 @@ const Title = ({ title, description }) => {
 };
 
 const theme = {
-  primaryColor: "#512da8"
+  primaryColor: "#3f51b5"
 };
 
 const ButtonDemo = styled.div`
